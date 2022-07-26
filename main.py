@@ -3,13 +3,17 @@ import pandas as pd
 import streamlit as st 
 import streamlit.components.v1 as components
 from rdkit import Chem
-# from rdkit.Chem.Draw import rdDepictor, rdMolDraw2D
 from rdkit.Chem.Descriptors import ExactMolWt, MolLogP, NumHDonors, NumHAcceptors
 
 st.title("Filter FDA-Approved Drugs by Lipinski's Rule of Five")
 
 st.markdown("What is Lipinski's Rule of Five?")
-
+'''Lipinski's Rule of Five is a set of molecular properties which describes
+    a drug's pharmacokinetics in the human body. These include the rate of absorption,
+    distribution, metabolism, and execretion (ADME). This is important during the
+    drug discovery phase, since a more active compound is correlated with a greater chance
+    of being biologically active in humans.
+'''
 # Use cache to allow for faster reloads after each update
 @st.cache(allow_output_mutation=True)
 
@@ -59,7 +63,7 @@ df["NumHAcceptors"] = df.apply(lambda x: calculate_hydroAcceptors(x["smiles"]), 
 
 # Create Sidebar panel 
 st.sidebar.header('Set Parameters')
-st.sidebar.write('*Note: Display compounds having values less than the following thresholds*')
+st.sidebar.write('*Note: Display compounds having values less than the following default thresholds*')
 
 # Molecular Weight Slider
 molWeight_cutoff = st.sidebar.slider(

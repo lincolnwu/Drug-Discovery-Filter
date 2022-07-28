@@ -1,6 +1,6 @@
 # Drug-Discovery-Filter
 Drug discovery tool to filter and display compounds based on pharmacokinetic attributes.
-Deployed at: https://drugdiscoveryfilter.herokuapp.com/
+Currently deployed at: https://drugdiscoveryfilter.herokuapp.com/
 
 ## Description
 This web application uses a list of FDA-approved drugs (https://www.cureffi.org/wp-content/uploads/2013/10/drugs.txt) and allows the users

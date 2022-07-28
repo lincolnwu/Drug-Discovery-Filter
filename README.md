@@ -1,5 +1,5 @@
 # Drug-Discovery-Filter
-Drug discovery tool to filter and display compounds based on pharmacokinetic attributes 
+Drug discovery tool to filter and display compounds based on pharmacokinetic attributes.
 Deployed at: https://drugdiscoveryfilter.herokuapp.com/
 
 ## Description
